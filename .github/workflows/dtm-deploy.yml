@@ -1,0 +1,2 @@
+name: DevStream Deploy
+on: [push]

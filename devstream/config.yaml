@@ -1,0 +1,5 @@
+tools:
+  - name: github-actions
+    plugin:
+      name: github-actions
+      version: v0.1.0

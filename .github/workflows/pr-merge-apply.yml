@@ -1,0 +1,25 @@
+
+name: DevStream Apply on PR Merge
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  apply:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Install DevStream
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/devstream-io/devstream/main/install.sh | bash
+          sudo mv dtm /usr/local/bin/
+
+      - name: Apply DevStream Config
+        run: |
+          dtm apply --config devstream/config.yaml

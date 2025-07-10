@@ -1,0 +1,3 @@
+plugin: argocd
+config:
+  namespace: argocd

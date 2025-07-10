@@ -1,0 +1,4 @@
+plugin: github-actions
+config:
+  workflows:
+    - ci.yml
