@@ -28,16 +28,19 @@ T2S contributors and clients can now set up the entire toolchain in minutes, rep
 
 ## Project Structure
 
+```
 devstream-quickstart-t2s/
-├── .github/workflows        # GitHub Actions (CI/CD and PR merge triggers)
-├── devstream                # DevStream main config and plugins
-├── docs                     # Contributor guide and architecture diagram
-├── envs                     # Environment-specific DevStream overrides
-├── helm                     # Real Helm charts for Jenkins, ArgoCD, Prometheus
-├── infra                    # Local Kubernetes setup (kind cluster)
-├── scripts                  # Setup and teardown shell scripts
-├── terraform                # Infrastructure as code for cloud clusters
-└── README.md
+├── .github/              # GitHub Actions workflows
+│   └── workflows/        # CI/CD and PR merge triggers
+├── devstream/            # DevStream main config and plugins
+├── docs/                 # Contributor guide and architecture diagram
+├── envs/                 # Environment-specific DevStream overrides
+├── helm/                 # Helm charts for Jenkins, ArgoCD, Prometheus
+├── infra/                # Local Kubernetes setup (kind cluster)
+├── scripts/              # Setup and teardown shell scripts
+├── terraform/            # Terraform IaC for AWS EKS, GCP GKE, Azure AKS
+└── README.md             # Project overview and usage instructions
+```
 
 ## Prerequisites
 
